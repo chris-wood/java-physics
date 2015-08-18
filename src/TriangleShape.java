@@ -1,12 +1,15 @@
 import java.awt.Color;
+import java.awt.*;
+import java.awt.geom.*;
+import javax.swing.*;
 
-public class Triangle implements Shape2D {
+public class TriangleShape implements Shape2D {
     Vertex v1;
     Vertex v2;
     Vertex v3;
     Color color;
 
-    public Triangle(Vertex vertex1, Vertex vertex2, Vertex vertex2, Color color) {
+    public TriangleShape(Vertex vertex1, Vertex vertex2, Vertex vertex3, Color color) {
         v1 = vertex1;
         v2 = vertex2;
         v3 = vertex3;
