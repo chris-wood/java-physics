@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-  
+
 public class Renderer {
 
     public static void main(String[] args) {
@@ -23,7 +23,11 @@ public class Renderer {
                     g2.setColor(Color.BLACK);
                     g2.fillRect(0, 0, getWidth(), getHeight());
 
-                    // rendering magic will happen here
+                    g2.translate(getWidth() / 2, getHeight() / 2);
+                    g2.setColor(Color.WHITE); // start off simple
+                    Color[] colors = { Color.WHITE, Color.RED, Color.GREEN, Color.BLUE };
+                    TetrahedronShape shape = new TetrahedronShape(100, 100, 100, colors);
+                    shape.draw(g2);
                 }
             };
         pane.add(renderPanel, BorderLayout.CENTER);
